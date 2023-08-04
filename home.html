@@ -73,11 +73,12 @@
         }
     </style>
     <script>
+        
+        var c = 0
         var target_date = new Date(2023, 7, 5, 18, 30).getTime();
         var dias, horas, minutos, segundos;
         //var regressiva = document.getElementById("regressiva");
-
-        setInterval(function () {
+        setInterval( ()=>{
             var current_date = new Date().getTime();
             var segundos_f = (target_date - current_date) / 1000;
 
@@ -94,13 +95,28 @@
             document.getElementById('hora').innerHTML = horas;
             document.getElementById('minuto').innerHTML = minutos;
             document.getElementById('segundo').innerHTML = segundos;
+            c = c - 1;
+            if((((new Date()).getTime() - (new Date("2023-08-05T18:30:00")).getTime()) / 1000)>0){
+                redir();
+            }
+
         }, 1000);
+        function count(n) {
+            c = c+n;
+            if(c > 15){
+                redir();
+            }
+
+        }
+        function redir() {
+            window.location.href = "http://73140629c078.sn.mynetname.net/felipe/cjp/lyric.html";
+        }
     </script>
 </head>
 
 <body>
 
-    <div class="bg">
+    <div class="bg" onclick="count(1)">
         <div class="cc">
         <div class="contagem">
             <table>
