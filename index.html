@@ -8,14 +8,18 @@
     <title>Coral Jovem Petrolina</title>
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
     <style>
+        body { background-color: #262626;}
         body,
         html {
             height: 100%;
             margin: 0;
         }
-
+        .cc{
+            max-width: 50%;
+            margin: auto;
+        }
         .bg {
-
+            
             background-image: url('./images/bg.png');
             height: 100%;
             background-position: center;
@@ -31,7 +35,7 @@
         }
 
         .contagem {
-            font-family: fantasy;
+            font-family: monospace, serif;
             /* width: 300px; */
             padding-top: 2px;
             width: 100%;
@@ -64,6 +68,7 @@
             padding-top: 15px;
             background-color: #ffffff;
             text-align: center;
+            font-family: fantasy;
         }
     </style>
     <script>
@@ -95,6 +100,7 @@
 <body>
 
     <div class="bg">
+        <div class="cc">
         <div class="contagem">
             <table>
                 <tr>
@@ -113,7 +119,7 @@
                 </tr>
                 <tr style="height:20px">
                     <td>
-                        <p class="legenda">D</p>
+                        <p class="legenda">Dia</p>
                     </td>
                     <td>
                         <p class="legenda">Hrs</p>
@@ -127,6 +133,7 @@
                 </tr>
             </table>
         </div>
+    </div>
     </div>
 
 </body>
